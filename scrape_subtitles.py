@@ -4,7 +4,7 @@ from pathlib import Path
 # asd
 def fetch_subtitles(video_id, lang='en'):
     Path("data/raw").mkdir(parents=True, exist_ok=True)
-    transcript = YouTubeTranscriptApi.fetch(video_id, languages=[lang])
+    transcript = YouTubeTranscriptApi().fetch(video_id, languages=[lang])
     df = pd.DataFrame(transcript)
     df['text'] = df['text'].str.replace('\n', ' ')
     df.to_csv(f"data/raw/{video_id}_{lang}.csv", index=False)
