@@ -1,7 +1,7 @@
 from youtube_transcript_api import YouTubeTranscriptApi
 import pandas as pd
 from pathlib import Path
-
+# asd
 def fetch_subtitles(video_id, lang='en'):
     Path("data/raw").mkdir(parents=True, exist_ok=True)
     transcript = YouTubeTranscriptApi.list_transcripts(video_id, languages=[lang])
