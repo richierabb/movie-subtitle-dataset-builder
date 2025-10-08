@@ -11,6 +11,6 @@ def fetch_subtitles(video_id, lang='en'):
     print(f"✅ Saved: {video_id}_{lang}.csv")
 
 if __name__ == "__main__":
-    videos = ['Ks-_Mh1QhMc', '3fumBcKC6RE']  # sample IDs
+    videos = ['n2dVFdqMYGA', 'h5ql62tF014']  # sample IDs
     for vid in videos:
         fetch_subtitles(vid)
